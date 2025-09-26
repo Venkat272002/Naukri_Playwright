@@ -4,7 +4,7 @@ const {HomePage}= require("../pages/homePage.page");
 const testData = JSON.parse(JSON.stringify(require('../utils/creds.json')));
 
 
-test('Verify user is navigating to the recommended jobs tab', async ({page})=>{
+test('Verify the user is navigating to the recommended jobs tab', async ({page})=>{
     const loginPage = new LoginPage(page);
     await loginPage.gotoLoginPage(testData.url);
     await loginPage.login(testData.username, testData.password);
